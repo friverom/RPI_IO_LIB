@@ -11,6 +11,7 @@ import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -157,6 +158,14 @@ public class RPI_IO {
  */
     public void setDate(String s) {
         rtc.setDate(s);
+    }
+    
+    public Calendar getCalendarRTC(){
+        return rtc.getCalendarRTC();
+    }
+    
+    public void setCalendarRTC(Calendar date){
+        rtc.setCalendarRTC(date);
     }
 /**
  * Blink RTC led at 1Hz
